@@ -1,0 +1,31 @@
+{
+   "first_name":"Tom",
+   "second_name":"Kevin",
+   "age":25,
+   "address":"asdfasdfa(H)\nsdsfsd\ndsafsd\n683432",
+   "hobbies":[
+      "Sports",
+      "Drawing",
+      "Music"
+   ],
+   "weight":72.2,
+   "married":true,
+   "children":null,
+   "complex_hobbies":[
+      {
+         "Sports":[
+            {
+               "Cricket":"Virat"
+            },
+            "Football"
+         ]
+      },
+      "Drawing",
+      {
+         "Music":"classical"
+      }
+   ],
+   "key1":{
+      "test":"value1"
+   }
+}

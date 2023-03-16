@@ -1,0 +1,42 @@
+web.example.com
+
+[web]
+web.example.com
+192.168.1.1
+
+[db]
+db.example.com
+postgres.example.com
+
+[web-stack]
+web.example.com
+db.example.com
+
+[db-srv]
+
+db[01:10].example.com
+db-srv-[a:g].example.com
+db.example.com:2222
+
+dbserver.example.com  ansible_port=2222 # Behavioral inventory parameters
+
+[websrv]
+# Host variable or Inventory variable
+web.example.com     http_port=8888      ssl_enabled=true
+web2.example.com    http_port=8880      ssl_enabled=false
+
+[websrv:vars]
+TLS_version=3
+https_port=4443
+
+[alias]
+apache ansible_host=192.168.1.1 ansible_port=22
+
+[websrv2:children]
+db-srv
+web-stack
+
+
+#https://docs.ansible.com/ansible/2.7/user_guide/intro_inventory.html#list-of-behavioral-inventory-parameters
+
+myec2 ansble_host=192.168.20.2 ansible_user=ubuntu ansbible_port=22 ansible_ssh_private_key_file=private.pem
